@@ -20,7 +20,7 @@ const MainMenuSection = () => {
         </div>
         <div className="menu-icons">
             <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
-            <MenuIcon hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare" />
+            <MenuIcon hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare fa-flip-horizontal" />
             <MenuIcon hideOnMobile={true} quantity="3" link="/wishlist" icon="fa-regular fa-heart" />
             <MenuIcon quantity="4" link="/shoppingcart" icon="fa-regular fa-bag-shopping" />
 
