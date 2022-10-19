@@ -7,7 +7,7 @@ const HomeView = () => {
   return (
     <>
       <MainMenuSection />
-      <ProductGridSection />
+      <ProductGridSection tittle="Featured Product" />
       <FooterSection />
     </>
   )

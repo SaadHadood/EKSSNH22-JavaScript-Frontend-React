@@ -6,7 +6,6 @@ const ProductCard = () => {
     <div className="col">
     <div className="card h-100">
         <ul className="card-menu">
-
             <li><button><i className="fa-regular fa-heart"></i></button></li>
             <li><button><i className="fa-regular fa-code-compare fa-flip-horizontal"></i></button></li>
             <li><button><i className="fa-regular fa-bag-shopping"></i></button></li>

@@ -134,6 +134,13 @@
        } 
     }
 
+    .card-menu button {
+        background: none;
+        border: none;
+        padding: 0;
+        outline: none;
+    }
+
     .card-menu .fa-heart {
         background-color: black;
         border: 0px solid black;
@@ -175,5 +182,4 @@
         background-color: #CDCED0;
         height: 100%;
     }
-
 }
