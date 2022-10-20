@@ -11,9 +11,11 @@ import ProductsView from './views/ProductsView';
 import ProductDetailsView from './views/ProductDetailsView';
 import CategoriesView from './views/CategoriesView';
 import ShopNowView from './views/ShopNowView';
+import FlasheSaleView from './views/FlasheSaleView'
 import FooterSection from './sections/FooterSection';
 import MainMenuSection from './sections/MainMenuSection';
 import ShowCase from './sections/ShowCase';
+import TopPicks from './sections/TopPicks';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/wishlist" element={<WishListView />} />
         <Route path="/shoppingcart" element={<ShoppingCartView />} />
         <Route path="/shopnow" element={<ShopNowView />} />
+        <Route path="/flashesale" element={<FlasheSaleView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>

@@ -3,6 +3,7 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import ShowCase from '../sections/ShowCase'
 import ProductGridSection from '../sections/ProductGridSection'
+import TopPicks from '../sections/TopPicks'
 
 const HomeView = () => {
 
@@ -25,6 +26,7 @@ const HomeView = () => {
       <ShowCase />
       <ProductGridSection tittle="Featured Products" products={featuredProducts} />
       <ProductGridSection tittle="Top Products" products={topProducts} />
+      <TopPicks />
       <FooterSection />
     </>
   )
