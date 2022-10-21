@@ -16,6 +16,7 @@ import FooterSection from './sections/FooterSection';
 import MainMenuSection from './sections/MainMenuSection';
 import ShowCase from './sections/ShowCase';
 import TopPicks from './sections/TopPicks';
+import Discount from './sections/Discount';
 
 function App() {
   return (
