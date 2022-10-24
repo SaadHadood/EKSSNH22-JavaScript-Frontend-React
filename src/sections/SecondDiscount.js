@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
 const SecondDiscount = ({tittle, products}) => {
@@ -15,7 +16,7 @@ const SecondDiscount = ({tittle, products}) => {
         <div id="discount-box" className="box">
             <div className="box-body">
                 <h1>2 FOR USD $49</h1>
-                <a href="#" className="btn btn-lg btn-white">FLASE SALE</a>
+                <NavLink className="btn btn-lg btn-white" to="/flashesale" end>FLASE SALE</NavLink>
             </div>
         </div>
       </div>

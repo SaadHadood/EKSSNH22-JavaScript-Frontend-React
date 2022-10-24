@@ -18,6 +18,7 @@ import ShowCase from './sections/ShowCase';
 import TopPicks from './sections/TopPicks';
 import Discount from './sections/Discount';
 import SecondDiscount from './sections/SecondDiscount';
+import SupportSection from './sections/SupportSection';
 
 function App() {
   return (
