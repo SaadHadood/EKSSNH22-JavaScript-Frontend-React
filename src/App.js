@@ -17,6 +17,7 @@ import MainMenuSection from './sections/MainMenuSection';
 import ShowCase from './sections/ShowCase';
 import TopPicks from './sections/TopPicks';
 import Discount from './sections/Discount';
+import SecondDiscount from './sections/SecondDiscount';
 
 function App() {
   return (

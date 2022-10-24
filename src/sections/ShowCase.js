@@ -6,7 +6,7 @@ import ShowCaseMan from '../assets/images/showcase-man.svg'
 const ShowCase = () => {
   return (
   <section className="showcase">
-      <div class="container">
+      <div className="container">
           <img src={ShowCaseFemale} alt="female sitting"/>
           <div className="showcase-body">
               <h1>SALE UP <br/> To 50% Off</h1>

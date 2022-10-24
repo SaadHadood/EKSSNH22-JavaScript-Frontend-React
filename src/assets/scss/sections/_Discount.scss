@@ -79,6 +79,17 @@
         margin-left: 12.5px;
     }
 
+    #discount-row {
+        display: flex;
+        justify-content: end;
+        margin-right: 3px;
+    }
+    
+    #discount-box {
+        width: 930px;
+        margin-right: 0.8rem;
+    }
+
     .col {
         height: 13rem;
         width: 15rem;

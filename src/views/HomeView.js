@@ -5,8 +5,10 @@ import ShowCase from '../sections/ShowCase'
 import ProductGridSection from '../sections/ProductGridSection'
 import TopPicks from '../sections/TopPicks'
 import Discount from '../sections/Discount'
+import SecondDiscount from '../sections/SecondDiscount'
 
 const HomeView = () => {
+  window.top.document.title = 'Fixxo.'
 
   const [featuredProducts, setFeaturedProducts] = useState ([
     {id: 1, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/4946413/pexels-photo-4946413.jpeg?auto=compress&cs=tinysrgb&w=1600" },
@@ -29,6 +31,7 @@ const HomeView = () => {
       <ProductGridSection tittle="Top Products" products={topProducts} />
       <TopPicks />
       <Discount tittle="Featured Products" products={featuredProducts} />
+      <SecondDiscount tittle="Featured Products" products={featuredProducts} />
       <FooterSection />
     </>
   )
