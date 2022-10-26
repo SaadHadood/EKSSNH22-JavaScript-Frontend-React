@@ -32,6 +32,53 @@ const ContactFormSection = () => {
     return errors;
   }
 
+/* test */
+  const checkLength = (element, minLength = 2, message) => {
+
+    if(message === undefined)
+    message = `Your ${element.target.id} must contain at least ${minLength} characters`
+
+    if (element.target.value.length < minLength) {
+        document.getElementById(element.target.id).classList.add('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerHTML = message
+    } else {
+        document.getElementById(element.target.id).classList.remove('error')
+        document.getElementById(`${element.target.id}ErrorMessage`).innerText = ""
+    }
+
+}
+
+const checkEmail = (element, message) => {
+  if(message === undefined)
+      message = `Your ${element.target.id} must be a valid e-mail address`
+  
+  if (!element.target.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+      document.getElementById(element.target.id).classList.add('error')
+      document.getElementById(`${element.target.id}ErrorMessage`).innerHTML = message
+  } else {
+      document.getElementById(element.target.id).classList.remove('error')
+      document.getElementById(`${element.target.id}ErrorMessage`).innerText = ""
+  }
+}
+
+  const handleClick = (e) => {
+    switch(e.target.type) {
+      case "text":
+          checkLength(e)
+          break;
+      case "email":
+          checkEmail(e)
+          break;
+      case "textarea":
+          checkLength(e, 5)
+          break;
+    }
+  }
+
+/* test slut */
+
+
+
   const handleChange = (e) => {
     const {id, value} = e.target
     setContactForm({...contactForm, [id]: value})
@@ -54,19 +101,18 @@ const ContactFormSection = () => {
                 (
                   <>
                       <h2>Come in Contact with Us</h2>
-                      <pre>{ JSON.stringify(formErrors)}</pre>
                       <form onSubmit={handleSubmit} noValidate>
                         <div>
-                          <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
-                          <div className="errorMessage">{formErrors.name}</div>
+                          <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleClick} />
+                          <div id="nameErrorMessage" className="errorMessage">{formErrors.name}</div>
                         </div>
                         <div>
-                          <input id="email" type="email" placeholder="Your Mail" value={contactForm.email} onChange={handleChange} />
-                          <div className="errorMessage">{formErrors.email}</div>
+                          <input id="email" type="email" placeholder="Your Mail" value={contactForm.email} onChange={handleChange} onKeyUp={handleClick} />
+                          <div id="emailErrorMessage" className="errorMessage">{formErrors.email}</div>
                         </div>
                         <div className="textarea">
-                          <textarea id="comment" placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
-                          <div className="errorMessage">{formErrors.comment}</div>
+                          <textarea id="comment" placeholder="Comments" value={contactForm.comment} onChange={handleChange} onKeyUp={handleClick} ></textarea>
+                          <div id="commentErrorMessage" className="errorMessage">{formErrors.comment}</div>
                         </div>
                         <div className="formBtn">
                           <button type="submit" className="btn-theme">Post Comments</button>

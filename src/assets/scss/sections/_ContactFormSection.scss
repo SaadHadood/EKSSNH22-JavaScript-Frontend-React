@@ -20,6 +20,7 @@
             width: 100%;
             padding: 18px 20px;
             border: 1px solid $color-lightgray;
+            outline: none;
         }
 
         .textarea {
@@ -31,6 +32,7 @@
                 padding: 18px 20px;
                 border: 1px solid $color-lightgray;
                 resize: none;
+                outline: none !important;
             }
         }
 
@@ -40,7 +42,7 @@
 
         .error {
             color: $color-theme;
-            border: 1px solid $color-theme;
+            border: 1px solid $color-theme !important;
         }
 
         .errorMessage {
