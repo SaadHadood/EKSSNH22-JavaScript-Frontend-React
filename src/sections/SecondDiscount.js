@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
+import { ProductContext } from '../contexts/contexts'
 
-const SecondDiscount = ({tittle, products}) => {
+const SecondDiscount = ({tittle}) => {
+
+  const products = useContext(ProductContext)
+
   return (
 
     <section className="discount">

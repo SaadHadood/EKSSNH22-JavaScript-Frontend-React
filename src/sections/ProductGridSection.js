@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductCard from '../components/ProductCard'
+import { ProductContext } from '../contexts/contexts'
 
-const ProductGridSection = ({tittle, products}) => {
+const ProductGridSection = ({tittle}) => {
+  const products = useContext(ProductContext)
 
   return (
     <section className="product-grid">
