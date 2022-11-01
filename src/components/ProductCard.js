@@ -19,7 +19,7 @@ const ProductCard = ({product}) => {
   return (
     <div className="col">
     <div className="card h-100">
-        <img src={product.img} alt={product.name} />
+        <img src={product.imageName} alt={product.name} />
         <ul className="card-menu">
             <li><button onClick={addToWishList}><i className="fa-regular fa-heart"></i></button></li>
             <li><button onClick={addToCompare}><i className="fa-regular fa-code-compare fa-flip-horizontal"></i></button></li>
