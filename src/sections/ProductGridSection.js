@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
-import { ProductContext } from '../contexts/contexts'
 
 const ProductGridSection = ({tittle, items = []}) => {
   return (

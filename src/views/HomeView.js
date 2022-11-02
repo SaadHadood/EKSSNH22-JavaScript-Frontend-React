@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import ShowCase from '../sections/ShowCase'
@@ -11,6 +11,14 @@ import { ProductContext } from '../contexts/contexts'
 
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
+
+  const [featuredProducts, setFeaturedProducts] = useState ([
+    {id: 1, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/4946413/pexels-photo-4946413.jpeg?auto=compress&cs=tinysrgb&w=1600" },
+    {id: 2, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/13914030/pexels-photo-13914030.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" },
+    {id: 3, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/13914029/pexels-photo-13914029.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" },
+    {id: 4, name: "Modern Black Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/13914028/pexels-photo-13914028.jpeg?auto=compress&cs=tinysrgb&w=1600" }
+  ])
+
   const productContext = useContext(ProductContext)
   return (
     <>
@@ -18,8 +26,8 @@ const HomeView = () => {
       <ShowCase />
       <ProductGridSection tittle="Featured Products" items={productContext.featuredProducts} />
       <TopPicks />
-      <Discount tittle="Featured Products" items={productContext.discountProducts} />
-      <SecondDiscount tittle="Featured Products" items={productContext.discountProducts} />
+      <Discount tittle="Featured Products" products={featuredProducts} />
+      <SecondDiscount tittle="Featured Products" products={featuredProducts} />
       <SupportSection />
       <FooterSection />
     </>

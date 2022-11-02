@@ -9,6 +9,7 @@ import WishListView from './views/WishListView';
 import CompareView from './views/CompareView';
 import SearchView from './views/SearchView';
 import ProductsView from './views/ProductsView';
+import PageProductSection from './sections/PageProductSection';
 import ProductDetailsView from './views/ProductDetailsView';
 import CategoriesView from './views/CategoriesView';
 import ShopNowView from './views/ShopNowView';
@@ -20,35 +21,19 @@ import TopPicks from './sections/TopPicks';
 import Discount from './sections/Discount';
 import SecondDiscount from './sections/SecondDiscount';
 import SupportSection from './sections/SupportSection';
-import { ProductContext } from './contexts/contexts';
+import { ProductContext } from './contexts/contexts'
 
 function App() {
   const [products, setProducts] = useState({
-    all: [],
-    featuredProducts: [],
-    discountProducts: []
+    featuredProducts: []
   })
   
     useEffect(() => {
-      const fetchAllProducts = async () => {
-        let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-        setProducts({...products, all: await result.json()})
-      }
-      fetchAllProducts()
-
       const fetchFeaturedProducts = async () => {
         let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
         setProducts({...products, featuredProducts: await result.json()})
       }
       fetchFeaturedProducts()
-
-
-      const fetchDiscountProducts = async () => {
-        let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-        setProducts({...products, discountProducts: await result.json()})
-      }
-      fetchDiscountProducts ()
-
 
   }, [setProducts])
 
