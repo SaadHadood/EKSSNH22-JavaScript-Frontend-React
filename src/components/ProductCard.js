@@ -25,7 +25,7 @@ const ProductCard = ({product}) => {
             <li><button onClick={addToCompare}><i className="fa-regular fa-code-compare fa-flip-horizontal"></i></button></li>
             <li><button onClick={addToCart}><i className="fa-regular fa-bag-shopping"></i></button></li>
         </ul>
-        <NavLink to={`/products/${product.name.toLowerCase().replace(/ /gi, "-")}`} className="quick-button"><button >QUICK VIEW</button></NavLink>
+        <NavLink to={`/products/${product.articleNumber || product.name }`} className="quick-button"><button >QUICK VIEW</button></NavLink>
         <div className="card-background"></div>
     </div>
     <div className="card-body">
