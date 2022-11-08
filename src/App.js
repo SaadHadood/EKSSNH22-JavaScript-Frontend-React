@@ -21,7 +21,8 @@ import TopPicks from './sections/TopPicks';
 import Discount from './sections/Discount';
 import SecondDiscount from './sections/SecondDiscount';
 import SupportSection from './sections/SupportSection';
-import { ProductContext } from './contexts/contexts'
+import { ProductContext } from './contexts/contexts';
+import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 
 function App() {
   const [products, setProducts] = useState({
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ShoppingCartProvider>
       <ProductContext.Provider value={products}>
       <Routes>
         <Route path="/" element={<HomeView />} />
@@ -57,6 +59,7 @@ function App() {
         <Route path="*" element={<NotFoundView />} />
       </Routes>
       </ProductContext.Provider>
+      </ShoppingCartProvider>
     </BrowserRouter>
   );
 }
