@@ -31,7 +31,7 @@ const ProductCard = ({product}) => {
         </div>
         
         <div className="d-flex justify-content-center align-products-center w-100">
-            <p className="card-discount-price">{product.price}</p>
+            <p className="card-discount-price">${product.price}</p>
         </div>   
     </div>
 </div>
