@@ -22,8 +22,10 @@ const HomeView = () => {
   const productContext = useContext(ProductContext)
   return (
     <>
+      <header>
       <MainMenuSection />
       <ShowCase />
+      </header>
       <ProductGridSection tittle="Featured Products" items={productContext.featuredProducts} />
       <TopPicks />
       <Discount tittle="Featured Products" products={featuredProducts} />

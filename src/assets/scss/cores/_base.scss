@@ -18,6 +18,11 @@ a {
     border: 1px solid $color-theme !important
 }
 
+header {
+    background: #E6E6E6;
+    background: linear-gradient(90deg, #E6E6E6 0%, #F5F5F5 100%);
+  }
+
 .btn-theme {
     position: relative;
     width: 100%;
